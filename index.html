@@ -1,9 +1,9 @@
 <!-- Unit 12 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
+[ yes ] $() Select by Element, ID AND Class 
+[ yes ] Use Three Different jQuery Methods 
 [  ] Add Five CSS Declarations
-[  ] Include Three Images
+[  yes] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
@@ -22,39 +22,56 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+      <button id="mem3-button">snack #1</button>
+    <button id="mem2-button">snack #2</button>
+    <button id="mem1-button">snack #3</button>
+
+    <h1>My Top 3 Snacks of <span>This Year</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem1" class="1">Snack #1</h3>
+        <img
+          id="snack1"
+          src="https://mobileimages.lowes.com/productimages/87571f18-ea0e-4e96-b7e6-7c22596d57e6/68969015.jpeg"
+        />
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem2" class="2">Snack #2</h3>
+         <img
+          id="snack2"
+          src="https://lh3.googleusercontent.com/proxy/0gpx26ztRHe6OvwblS54gn357pnux6k5vsfqcKtT2pbl_crPTr5N--fVJvoyuovc6n6CkBz3zXFq2-wSxKDEMnLdz5E8_7tIJAl8yYX97mQ01JyyzWHmWZXW73uZiC-E7A4bJohPon7iDoFZ62ZX2gP_xpqHziSU3hCKErJ0B2qvqoxjlSRfjU3FJpXFMFnmub7OSOIp"
+        />
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="mem3" class="3">Snack #3</h3>
+        <img
+          id="snack3"
+          src="https://www.kroger.com/product/images/xlarge/front/0003800014409"
+          
+        />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      $("#mem1-button").click(function () {
+       $("#mem3-button").click(function () {
         $("#mem1").css("color", "purple");
+        $("#snack1").show(200);
+        $(".1").text("Lays");
       });
 
       $("#mem2-button").click(function () {
         $("#mem2").css("color", "blue");
+        $("#snack2").show(200);
+        $(".2").text("Takis");
       });
 
-      $("#mem3-button").click(function () {
+      $("#mem1-button").click(function () {
         $("#mem3").css("color", "green");
+        $("#snack3").show(200);
+        $(".3").text("Pringles");
       });
     </script>
   </body>
